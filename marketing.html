@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="廷豐AI金融科技｜行銷企劃部門招募">
+  <meta property="og:description" content="不只是寫簡報，你是我們征服高資產市場的策略師！我們在找AI時代的視覺說書人。">
+  <meta property="og:type" content="website">
+  <title>廷豐AI金融科技｜行銷企劃部門招募</title>
+  <style>
+    :root {
+      --navy:      #09152A;
+      --navy-mid:  #0D1E3A;
+      --navy-lt:   #122448;
+      --navy-acc:  #1A3260;
+      --gold:      #C9A84C;
+      --gold-br:   #E8C96A;
+      --gold-pale: #F5E6B8;
+      --gold-dk:   #8A6E2A;
+      --silver:    #9EB3C8;
+      --silver-lt: #C8D8E8;
+      --white:     #FFFFFF;
+      --off-white: #E8EEF4;
+      --gray-text: #7A94A8;
+      --body-text: #B8CCE0;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, 'Microsoft JhengHei', 'PingFang TC', 'Noto Sans TC', sans-serif;
+      background: var(--navy);
+      color: var(--body-text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 0;
+      background-image: radial-gradient(circle, rgba(201,168,76,0.10) 1.5px, transparent 1.5px);
+      background-size: 38px 38px;
+      pointer-events: none;
+    }
+    .wrap { position: relative; z-index: 1; max-width: 860px; margin: 0 auto; padding: 0 20px; }
+    .share-bar {
+      background: rgba(201,168,76,0.12);
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+      text-align: center; padding: 10px 20px;
+      font-size: 13px; color: var(--gold-br);
+      position: relative; z-index: 10;
+    }
+    .share-bar a {
+      color: var(--gold); font-weight: 700; margin-left: 8px;
+      text-decoration: none; border-bottom: 1px solid var(--gold);
+    }
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(9,21,42,0.96);
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+      backdrop-filter: blur(12px);
+    }
+    .header-inner {
+      max-width: 860px; margin: 0 auto; padding: 0 20px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .logo-icon {
+      width: 36px; height: 36px; border-radius: 8px;
+      background: linear-gradient(135deg, var(--gold-dk), var(--gold));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; font-weight: 900; color: var(--navy); flex-shrink: 0;
+    }
+    .logo-cn { font-size: 15px; font-weight: 900; color: var(--white); }
+    .logo-en { font-size: 9px; letter-spacing: 2.5px; color: var(--gold); }
+    .header-cta {
+      background: linear-gradient(135deg, var(--gold-dk), var(--gold));
+      color: var(--navy); font-weight: 900; font-size: 14px;
+      padding: 9px 20px; border-radius: 8px; text-decoration: none;
+      transition: opacity .2s;
+    }
+    .header-cta:hover { opacity: .85; }
+    .hero {
+      min-height: 85vh;
+      display: flex; align-items: center;
+      padding: 80px 20px 60px;
+      position: relative; overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute; right: -60px; top: 50%; transform: translateY(-50%);
+      width: 520px; height: 520px;
+      background: radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-wrap { max-width: 860px; margin: 0 auto; width: 100%; position: relative; z-index: 2; }
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 20px; padding: 6px 14px; margin-bottom: 28px;
+      font-size: 12px; color: var(--gold-br); letter-spacing: 1.5px;
+    }
+    .hero-tag::before { content: '✦'; color: var(--gold); }
+    .hero h1 {
+      font-size: clamp(2.4rem, 6vw, 3.6rem);
+      font-weight: 900; line-height: 1.2; color: var(--white); margin-bottom: 16px;
+    }
+    .hero h1 span { color: var(--gold); }
+    .hero-sub { font-size: 1.25rem; font-weight: 700; color: var(--silver-lt); margin-bottom: 20px; }
+    .hero-desc { font-size: 1.05rem; color: var(--body-text); line-height: 1.9; max-width: 580px; margin-bottom: 36px; }
+    .hero-badges { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 40px; }
+    .badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(15,32,64,0.8); border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 24px; padding: 8px 18px; font-size: 14px; font-weight: 700; color: var(--gold-br);
+    }
+    .hero-cta {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: linear-gradient(135deg, var(--gold-dk), var(--gold));
+      color: var(--navy); font-weight: 900; font-size: 16px;
+      padding: 14px 32px; border-radius: 12px; text-decoration: none;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(201,168,76,0.4); }
+    section { padding: 80px 20px; }
+    .section-label {
+      display: flex; align-items: center; gap: 10px;
+      color: var(--gold); font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .section-label::before { content: ''; display: block; width: 28px; height: 2px; background: var(--gold); }
+    h2.section-title {
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 900; color: var(--white); margin-bottom: 12px; line-height: 1.3;
+    }
+    .section-intro { font-size: 1.05rem; color: var(--silver); max-width: 620px; margin-bottom: 44px; }
+    .job-card {
+      background: linear-gradient(135deg, rgba(18,36,72,0.9), rgba(13,30,58,0.95));
+      border: 1px solid rgba(201,168,76,0.25);
+      border-radius: 20px; padding: 40px 36px; margin-bottom: 32px;
+      transition: border-color .3s, transform .3s;
+      position: relative; overflow: hidden;
+    }
+    .job-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--gold-dk), var(--gold), var(--gold-br));
+    }
+    .job-card:hover { border-color: rgba(201,168,76,0.5); transform: translateY(-3px); }
+    .job-card-header { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 8px; }
+    .job-emoji { font-size: 2.6rem; flex-shrink: 0; margin-top: 2px; }
+    .job-num { font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+    .job-title { font-size: 1.35rem; font-weight: 900; color: var(--white); line-height: 1.3; }
+    .job-task { font-size: 13px; color: var(--silver); margin-top: 6px; }
+    .job-task strong { color: var(--gold-pale); }
+    .job-tagline {
+      background: rgba(201,168,76,0.08); border-left: 3px solid var(--gold);
+      border-radius: 0 8px 8px 0; padding: 12px 18px;
+      font-size: 15px; font-style: italic; color: var(--gold-br);
+      margin: 20px 0 28px;
+    }
+    .job-section-title {
+      font-size: 13px; font-weight: 900; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 14px; display: flex; align-items: center; gap: 8px;
+    }
+    .job-section-title::after { content: ''; flex: 1; height: 1px; background: rgba(201,168,76,0.2); }
+    .highlights { display: flex; flex-direction: column; gap: 14px; margin-bottom: 32px; }
+    .highlight-item {
+      display: flex; gap: 14px; align-items: flex-start;
+      background: rgba(26,50,96,0.4); border-radius: 12px; padding: 14px 16px;
+    }
+    .highlight-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 1px; }
+    .highlight-label { font-size: 14px; font-weight: 900; color: var(--white); margin-bottom: 4px; }
+    .highlight-text { font-size: 14px; color: var(--body-text); line-height: 1.75; }
+    .requirements { display: flex; flex-direction: column; gap: 10px; }
+    .req-item {
+      display: flex; align-items: flex-start; gap: 12px;
+      padding: 10px 14px;
+      border-left: 2px solid rgba(201,168,76,0.3);
+      border-radius: 0 8px 8px 0;
+      font-size: 14px; color: var(--silver-lt); line-height: 1.75;
+    }
+    .req-arrow { color: var(--gold-br); font-weight: 900; flex-shrink: 0; margin-top: 2px; }
+    .why-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px; }
+    @media(max-width:560px){ .why-grid { grid-template-columns: 1fr; } }
+    .why-item {
+      background: rgba(13,30,58,0.7); border: 1px solid rgba(201,168,76,0.15);
+      border-radius: 16px; padding: 24px; transition: border-color .3s;
+    }
+    .why-item:hover { border-color: rgba(201,168,76,0.4); }
+    .why-icon { font-size: 2rem; margin-bottom: 12px; }
+    .why-title { font-size: 15px; font-weight: 900; color: var(--gold-br); margin-bottom: 8px; }
+    .why-text  { font-size: 14px; color: var(--body-text); line-height: 1.8; }
+    .cta-section {
+      text-align: center; padding: 80px 20px;
+      background: linear-gradient(180deg, transparent, rgba(201,168,76,0.06), transparent);
+    }
+    .cta-section h2 { font-size: 2rem; font-weight: 900; color: var(--white); margin-bottom: 12px; }
+    .cta-section p  { color: var(--silver); font-size: 1.05rem; margin-bottom: 32px; }
+    .cta-email {
+      display: inline-flex; align-items: center; gap: 10px;
+      color: var(--gold-br); font-size: 1.1rem; font-weight: 700;
+      text-decoration: none; margin-bottom: 28px;
+      border-bottom: 1px dashed rgba(201,168,76,0.4); padding-bottom: 2px;
+    }
+    .cta-note { font-size: 15px; color: var(--gray-text); max-width: 500px; margin: 0 auto 36px; line-height: 1.8; }
+    .cta-back {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: var(--silver); font-size: 13px; text-decoration: none;
+      border: 1px solid rgba(158,179,200,0.25); border-radius: 8px;
+      padding: 8px 18px; margin-top: 8px; transition: color .2s, border-color .2s;
+    }
+    .cta-back:hover { color: var(--gold-br); border-color: var(--gold); }
+    footer {
+      background: rgba(9,21,42,0.95); border-top: 1px solid rgba(201,168,76,0.15);
+      text-align: center; padding: 32px 20px;
+      font-size: 13px; color: var(--gray-text);
+    }
+    .fade-up { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+    @media(max-width:640px){ .hero h1 { font-size: 2rem; } .job-card { padding: 28px 20px; } }
+  </style>
+</head>
+<body>
+  <div class="share-bar">
+    📣 分享這個頁面給你認識的創意人才！
+    <a href="#" id="copy-link">複製連結</a>
+  </div>
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">廷</div>
+        <div class="logo-texts">
+          <div class="logo-cn">廷豐 AI 金融科技</div>
+          <div class="logo-en">GE AI FIN TECH</div>
+        </div>
+      </a>
+      <a href="mailto:Amanda.lin@fpitw.com" class="header-cta">立即聯繫 →</a>
+    </div>
+  </header>
+  <section class="hero">
+    <div class="hero-wrap fade-up">
+      <div class="hero-tag">行銷企劃部門招募 2025</div>
+      <h1>你的創意，<br>讓 <span>AI 金融</span><br>被世界看見</h1>
+      <div class="hero-sub">我們在找 AI 時代的視覺策略師與說書人</div>
+      <p class="hero-desc">
+        AI 正在重塑金融產業的每一個環節。<br>
+        現在，我們需要能將冰冷數據轉化為動人故事的你。<br>
+        這不是普通的行銷職位——是站在 AI 金融最前線的創意舞台。
+      </p>
+      <div class="hero-badges">
+        <div class="badge">🚀 行銷企劃</div>
+        <div class="badge">🎬 影音製片</div>
+        <div class="badge">✨ 品牌內容</div>
+      </div>
+      <a href="mailto:Amanda.lin@fpitw.com" class="hero-cta">立即投遞履歷 →</a>
+    </div>
+  </section>
+  <section style="padding: 40px 20px 80px;">
+    <div class="wrap">
+      <div class="section-label">開放職缺</div>
+      <h2 class="section-title">找到屬於你的舞台</h2>
+      <p class="section-intro">兩個截然不同卻同樣關鍵的創意職位，等待對 AI 金融有熱情的你。</p>
+      <div class="job-card fade-up">
+        <div class="job-card-header">
+          <div class="job-emoji">🚀</div>
+          <div>
+            <div class="job-num">職位一 · Position 01</div>
+            <div class="job-title">市場開發支援－專案行銷企劃</div>
+            <div class="job-task"><strong>核心任務：</strong>打造業務開發的最強軍火庫（簡報、行銷工具、異業結盟提案）</div>
+          </div>
+        </div>
+        <div class="job-tagline">「不只是寫簡報，你是我們征服高資產市場的策略師！」🚀</div>
+        <div class="job-section-title">職位亮點</div>
+        <div class="highlights">
+          <div class="highlight-item">
+            <div class="highlight-icon">🤖</div>
+            <div>
+              <div class="highlight-label">科技賦能</div>
+              <div class="highlight-text">站在 AI 金融的最前線，將深奧的 AI 策略轉化為客戶聽得懂、會心動的視覺語言。</div>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">♟️</div>
+            <div>
+              <div class="highlight-label">戰略地位</div>
+              <div class="highlight-text">你的每一份簡報，都是促成與 KGI、中信等大型投信合作的關鍵推手。</div>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">⚡</div>
+            <div>
+              <div class="highlight-label">工具自由</div>
+              <div class="highlight-text">鼓勵使用 AI 繪圖、自動化排版工具，效率萬歲！</div>
+            </div>
+          </div>
+        </div>
+        <div class="job-section-title">我們在找這樣的你</div>
+        <div class="requirements">
+          <div class="req-item"><span class="req-arrow">→</span>能把數據變成故事，把複雜模型變成優雅視覺。</div>
+          <div class="req-item"><span class="req-arrow">→</span>對金融市場有好奇心，且具備極強的 B2B 提案簡報能力（PPT／Keynote／Canva 狂熱者優先）。</div>
+          <div class="req-item"><span class="req-arrow">→</span>喜歡跨部門溝通，能精準捕捉 AI 工程師與業務開發團隊的交集點。</div>
+        </div>
+      </div>
+      <div class="job-card fade-up">
+        <div class="job-card-header">
+          <div class="job-emoji">🎬</div>
+          <div>
+            <div class="job-num">職位二 · Position 02</div>
+            <div class="job-title">數位影音行銷－產品形象與策略製片</div>
+            <div class="job-task"><strong>核心任務：</strong>將 AI 投資策略「影視化」，打造品牌的視覺靈魂</div>
+          </div>
+        </div>
+        <div class="job-tagline">「誰說金融影片很無聊？我們要找 AI 時代的視覺說書人！」🎥</div>
+        <div class="job-section-title">職位亮點</div>
+        <div class="highlights">
+          <div class="highlight-item">
+            <div class="highlight-icon">🎨</div>
+            <div>
+              <div class="highlight-label">創意主導</div>
+              <div class="highlight-text">從投資策略的腳本發想、形象片拍攝到剪輯，這裡就是你的實驗室。</div>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">🎥</div>
+            <div>
+              <div class="highlight-label">跨界融合</div>
+              <div class="highlight-text">用好萊塢式的運鏡或科技感剪輯，來詮釋冷冰冰的 AI 數據。</div>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">📱</div>
+            <div>
+              <div class="highlight-label">自媒體靈魂</div>
+              <div class="highlight-text">負責經營公司的數位影音內容（YouTube／Shorts／Podcast），打造業界指標。</div>
+            </div>
+          </div>
+        </div>
+        <div class="job-section-title">我們在找這樣的你</div>
+        <div class="requirements">
+          <div class="req-item"><span class="req-arrow">→</span>具備影音企劃、腳本撰寫與後期剪輯能力（熟 Premiere／Final Cut／After Effects）。</div>
+          <div class="req-item"><span class="req-arrow">→</span>對「金融美學」有堅持，能拍出讓高資產客戶信任且驚艷的專業質感。</div>
+          <div class="req-item"><span class="req-arrow">→</span>熟悉數位社群趨勢，知道如何讓 1 分鐘的產品片在朋友圈瘋傳。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section style="padding: 60px 20px; background: rgba(13,30,58,0.5);">
+    <div class="wrap">
+      <div class="section-label fade-up">為什麼加入我們</div>
+      <h2 class="section-title fade-up">不只是一份工作</h2>
+      <p class="section-intro fade-up">你將成為 AI 金融浪潮的說書人，與最前沿的團隊共同定義市場。</p>
+      <div class="why-grid">
+        <div class="why-item fade-up">
+          <div class="why-icon">🌊</div>
+          <div class="why-title">站在浪頭上</div>
+          <div class="why-text">AI 金融滲透率極低，先行者的機會窗口正在打開。你不是來執行任務的，是來定義品牌敘事的。</div>
+        </div>
+        <div class="why-item fade-up">
+          <div class="why-icon">🤝</div>
+          <div class="why-title">直接影響力</div>
+          <div class="why-text">你的作品直接服務 KGI、中信等頂級金融機構合作案，每一個創意都有實際商業影響。</div>
+        </div>
+        <div class="why-item fade-up">
+          <div class="why-icon">🧠</div>
+          <div class="why-title">AI 工具全開放</div>
+          <div class="why-text">我們鼓勵你用最新 AI 工具提升創作效率，從生成式設計到自動化剪輯，大膽實驗。</div>
+        </div>
+        <div class="why-item fade-up">
+          <div class="why-icon">🚀</div>
+          <div class="why-title">小團隊大舞台</div>
+          <div class="why-text">扁平化組織，你的意見直達決策層。沒有繁瑣流程，創意能快速落地執行。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="cta-section fade-up">
+    <div class="wrap">
+      <h2>準備好了嗎？</h2>
+      <p>帶著你的作品集和想法，我們一起聊聊——沒有什麼負擔。</p>
+      <br>
+      <a href="mailto:Amanda.lin@fpitw.com" class="cta-email">✉ Amanda.lin@fpitw.com</a>
+      <p class="cta-note">如果看到這裡有什麼在心裡動了一下——帶著你的作品集來，說說你最得意的一個企劃或影片，我們一起聊聊。</p>
+      <br>
+      <a href="index.html" class="cta-back">← 查看其他職缺（商務開發夥伴）</a>
+    </div>
+  </section>
+  <footer>
+    <p>廷豐 AI 金融科技 GE AI Fin Tech ｜ 與 AI 產業共同成長的事業機會</p>
+    <p style="margin-top:6px">© 2025 廷豐 AI 金融科技 GE AI Fin Tech．All rights reserved.</p>
+    <p style="margin-top:6px">聯絡我們：<a href="mailto:Amanda.lin@fpitw.com" style="color:var(--gold)">Amanda.lin@fpitw.com</a></p>
+  </footer>
+  <script>
+    document.getElementById('copy-link').addEventListener('click', (e) => {
+      e.preventDefault();
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        const btn = e.target;
+        btn.textContent = '✓ 已複製！';
+        setTimeout(() => btn.textContent = '複製連結', 2000);
+      });
+    });
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
